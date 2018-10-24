@@ -11,6 +11,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
+    "hex-to-hsl": "^1.0.2",
     "lyft-coloralgorithm": "lyft/coloralgorithm#soffes/fix-package",
     "tslib": "^1"
   },
