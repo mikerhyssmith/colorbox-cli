@@ -1,0 +1,63 @@
+{
+  "name": "colorbox-cli",
+  "description": "A CLI for Lyfts color algorithm",
+  "version": "0.0.1",
+  "author": " @mikerhyssmith",
+  "bin": {
+    "colorbox": "./bin/run"
+  },
+  "bugs": "https://github.com/mikerhyssmith/https://github.com/mikerhyssmith/colorbox-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "lyft-coloralgorithm": "lyft/coloralgorithm#soffes/fix-package",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "globby": "^8",
+    "mocha": "^5",
+    "nyc": "^13",
+    "ts-node": "^7",
+    "tslint": "^5",
+    "typescript": "^3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/mikerhyssmith/https://github.com/mikerhyssmith/colorbox-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "Apache",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "colorbox",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "mikerhyssmith/https://github.com/mikerhyssmith/colorbox-cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
